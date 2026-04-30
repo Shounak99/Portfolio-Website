@@ -1,0 +1,23 @@
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Blog from "./components/Blog";
+function App() {
+  return (
+    <div className="App bg-gray-900 min-h-screen ">
+      <Navbar name="Shounak Kossambe" />
+      <Hero name="Shounak Kossambe" title="Software Engineer" />
+      <Projects />
+      <Skills />
+      <Blog />
+      <About />
+      <Contact />
+    </div>
+  );
+}
+
+export default App;
