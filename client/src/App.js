@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 import Blog from "./components/Blog";
 function App() {
   return (
-    <div className="App bg-gray-900 min-h-screen ">
+    <div className="bg-[#0d0d0d] min-h-screen">
       <Navbar name="Shounak Kossambe" />
       <Hero name="Shounak Kossambe" title="Software Engineer" />
       <Projects />
