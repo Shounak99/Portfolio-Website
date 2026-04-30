@@ -1,8 +1,14 @@
 function Hero({ name, title }) {
   return (
-    <section className="bg-gray-800 text-center p-20">
-      <h1 className="text-5xl text-gray-400 font-bold">{name}</h1>
-      <h2 className="text2xl text-gray-300 font-bold">{title}</h2>
+    <section className="px-8 py-32 max-w-4xl mx-auto">
+      <p className="text-[#c9a84c] text-xs tracking-widest uppercase mb-4">
+        PORTFOLIO
+      </p>
+
+      <h1 className="text-6xl font-bold text-white mb-4 leading-tight">
+        {name}
+      </h1>
+      <p className="text-[#a0a0a0] text-xl tracking-wide">{title}</p>
     </section>
   );
 }

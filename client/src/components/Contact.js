@@ -38,14 +38,20 @@ function Contact() {
 
   return (
     <section id="contact" className="max-w-2xl mx-auto py-16 px-8">
+      <p className="text-[#c9a84c] text-xs tracking-widest uppercase mb-4">
+        CONTACT
+      </p>
       <h2 className="text-3xl font-bold text-white mb-8">Contact Me</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label className="block text-white font-bold mb-2" htmlFor="name">
+          <label
+            className="text-[#a0a0a0] text-xs tracking-widest uppercase mb-2 block"
+            htmlFor="name"
+          >
             Name:
           </label>
           <input
-            className="w-full p-2 mb-4 rounded bg-gray-800 text-white border border-gray-600"
+            className="bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#c9a84c] text-white rounded p-3 w-full mb-4 outline-none transition-all duration-300"
             type="text"
             id="name"
             name="name"
@@ -55,11 +61,14 @@ function Contact() {
           />
         </div>
         <div>
-          <label className="block text-white font-bold mb-2" htmlFor="email">
+          <label
+            className="text-[#a0a0a0] text-xs tracking-widest uppercase mb-2 block"
+            htmlFor="email"
+          >
             Email:
           </label>
           <input
-            className="w-full p-2 mb-4 rounded bg-gray-800 text-white border border-gray-600"
+            className="bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#c9a84c] text-white rounded p-3 w-full mb-4 outline-none transition-all duration-300"
             type="email"
             id="email"
             name="email"
@@ -69,11 +78,14 @@ function Contact() {
           />
         </div>
         <div>
-          <label className="block text-white font-bold mb-2" htmlFor="message">
+          <label
+            className="text-[#a0a0a0] text-xs tracking-widest uppercase mb-2 block"
+            htmlFor="message"
+          >
             Message:
           </label>
           <textarea
-            className="w-full p-2 mb-4 rounded bg-gray-800 text-white border border-gray-600"
+            className="bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#c9a84c] text-white rounded p-3 w-full mb-4 outline-none transition-all duration-300"
             id="message"
             name="message"
             value={formData.message}
@@ -83,7 +95,7 @@ function Contact() {
         </div>
         <button
           type="submit"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-black px-6 py-2 text-sm tracking-widest uppercase transition-all duration-300 mt-4"
         >
           Send Message
         </button>
