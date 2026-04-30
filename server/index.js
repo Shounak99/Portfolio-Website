@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-app.use(cors({ origin: "http://localhost:3000" , "https://shounaksportfolio.vercel.app/"}));
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://shounaksportfolio.vercel.app/"]}),
+);
 const PORT = 5000;
 
 app.use(express.json());
