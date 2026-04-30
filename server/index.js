@@ -3,8 +3,20 @@ const app = express();
 const cors = require("cors");
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://shounaksportfolio.vercel.app/"]}),
+    origin: function (origin, callback) {
+      if (
+        !origin ||
+        origin.endsWith(".vercel.app") ||
+        origin === "http://localhost:3000"
+      ) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+  }),
 );
+
 const PORT = 5000;
 
 app.use(express.json());
