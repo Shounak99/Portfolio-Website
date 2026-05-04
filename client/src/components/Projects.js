@@ -3,7 +3,7 @@ function Projects() {
   const [projectList, setProjects] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("https://shounak-portfolio-backend.onrender.com/api/projects")
+    fetch(`${process.env.REACT_APP_API_URL}/api/projects`)
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error("Error fetching projects:", error));

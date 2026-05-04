@@ -6,7 +6,7 @@ function Blog() {
   const [selectedBlog, setSelectedBlog] = useState(null);
 
   useEffect(() => {
-    fetch("https://shounak-portfolio-backend.onrender.com/api/blogs")
+    fetch(`${process.env.REACT_APP_API_URL}/api/blogs`)
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((error) => console.log("Error fetching blogs:", error));

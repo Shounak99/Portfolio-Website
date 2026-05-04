@@ -16,7 +16,7 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you would typically send formData to your backend server
-    fetch("https://shounak-portfolio-backend.onrender.com/api/contact", {
+    fetch(`${process.env.REACT_APP_API_URL}/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

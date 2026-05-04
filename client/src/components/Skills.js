@@ -3,7 +3,7 @@ import React from "react";
 function Skills() {
   const [skillList, setSkillList] = React.useState([]);
   React.useEffect(() => {
-    fetch("https://shounak-portfolio-backend.onrender.com/api/skills")
+    fetch(`${process.env.REACT_APP_API_URL}/api/skills`)
       .then((response) => response.json())
       .then((data) => setSkillList(data))
       .catch((error) => console.error("Error fetching skills:", error));
