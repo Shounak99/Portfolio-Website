@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 import Blog from "./components/Blog";
 import Experience from "./components/Experience";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 function AppContent() {
   const location = useLocation();
