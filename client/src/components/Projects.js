@@ -2,13 +2,23 @@ import React from "react";
 import PageTransition from "./PageTransition";
 function Projects() {
   const [projectList, setProjects] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/api/projects`)
       .then((response) => response.json())
-      .then((data) => setProjects(data))
-      .catch((error) => console.error("Error fetching projects:", error));
+      .then((data) => {
+        setProjects(data);
+        setLoading(false);
+      })
+
+      .catch((error) => {
+        console.error("Error fetching projects:", error);
+        setLoading(false);
+      });
   }, []);
+  if (loading)
+    return <p className="text-[#a0a0a0] text-center py-32">Loading...</p>;
   return (
     <PageTransition>
       <section id="projects" className="max-w-4xl mx-auto py-16 px-4 md:px-8">
