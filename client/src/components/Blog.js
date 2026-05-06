@@ -14,9 +14,9 @@ function Blog() {
 
   if (selectedBlog) {
     return (
-      <section className="max-w-2xl mx-auto py-16 px-8">
+      <section className="max-w-2xl mx-auto py-16 px-4 md:px-8">
         <button
-          className="border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-black px-6 py-2 text-sm tracking-widest uppercase transition-all duration-300 mt-4"
+          className="border border-[#e05c3a] text-[#e05c3a] hover:bg-[#e05c3a] hover:text-black px-6 py-2 text-sm tracking-widest uppercase transition-all duration-300 mt-4"
           onClick={() => setSelectedBlog(null)}
         >
           Back
@@ -29,11 +29,11 @@ function Blog() {
     );
   }
   return (
-    <section className="max-w-2xl mx-auto py-16 px-8">
+    <section className="max-w-2xl mx-auto py-16 px-4 md:px-8">
       <h2 className="text-2xl font-bold text-white mb-4">Blog</h2>
       {blogs.map((blog) => (
         <div
-          className="bg-[#1a1a1a] border border-[#2a2a2a] hover:border-[#c9a84c] transition-all duration-300 rounded-lg p-6 mb-4 cursor-pointer"
+          className="bg-[#1a1a1a] border border-[#2a2a2a] hover:border-[#e05c3a] transition-all duration-300 rounded-lg p-6 mb-4 cursor-pointer"
           key={blog.id}
           onClick={() => setSelectedBlog(blog)}
         >

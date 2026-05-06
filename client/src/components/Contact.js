@@ -37,8 +37,8 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="max-w-2xl mx-auto py-16 px-8">
-      <p className="text-[#c9a84c] text-xs tracking-widest uppercase mb-4">
+    <section id="contact" className="max-w-2xl mx-auto py-16 px-4 md:px-8">
+      <p className="text-[#e05c3a] text-xs tracking-widest uppercase mb-4">
         CONTACT
       </p>
       <h2 className="text-3xl font-bold text-white mb-8">Contact Me</h2>
@@ -51,7 +51,7 @@ function Contact() {
             Name:
           </label>
           <input
-            className="bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#c9a84c] text-white rounded p-3 w-full mb-4 outline-none transition-all duration-300"
+            className="bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#e05c3a] text-white rounded p-3 w-full mb-4 outline-none transition-all duration-300"
             type="text"
             id="name"
             name="name"
@@ -68,7 +68,7 @@ function Contact() {
             Email:
           </label>
           <input
-            className="bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#c9a84c] text-white rounded p-3 w-full mb-4 outline-none transition-all duration-300"
+            className="bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#e05c3a] text-white rounded p-3 w-full mb-4 outline-none transition-all duration-300"
             type="email"
             id="email"
             name="email"
@@ -85,7 +85,7 @@ function Contact() {
             Message:
           </label>
           <textarea
-            className="bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#c9a84c] text-white rounded p-3 w-full mb-4 outline-none transition-all duration-300"
+            className="bg-[#1a1a1a] border border-[#2a2a2a] focus:border-[#e05c3a] text-white rounded p-3 w-full mb-4 outline-none transition-all duration-300"
             id="message"
             name="message"
             value={formData.message}
@@ -95,7 +95,7 @@ function Contact() {
         </div>
         <button
           type="submit"
-          className="border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-black px-6 py-2 text-sm tracking-widest uppercase transition-all duration-300 mt-4"
+          className="border border-[#e05c3a] text-[#e05c3a] hover:bg-[#e05c3a] hover:text-black px-6 py-2 text-sm tracking-widest uppercase transition-all duration-300 mt-4"
         >
           Send Message
         </button>

@@ -8,8 +8,8 @@ function Experience() {
       .catch((error) => console.error("Error fetching experience:", error));
   }, []);
   return (
-    <section className="max-w-4xl mx-auto py-16 px-8">
-      <p className="text-[#c9a84c] text-xs tracking-widest uppercase mb-4">
+    <section className="max-w-4xl mx-auto py-16 px-4 md:px-8">
+      <p className="text-[#e05c3a] text-xs tracking-widest uppercase mb-4">
         EXPERIENCE
       </p>
       <h2 className="text-3xl font-bold text-white mb-8">Work Experience</h2>
@@ -26,7 +26,7 @@ function Experience() {
             {job.roles.map((role, i) => (
               <div key={i} className="flex justify-between mb-1">
                 <span className="text-white text-sm">{role.title}</span>
-                <span className="text-[#c9a84c] text-xs">
+                <span className="text-[#e05c3a] text-xs">
                   {role.from} - {role.to}
                 </span>
               </div>

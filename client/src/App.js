@@ -12,9 +12,9 @@ function App() {
     <div className="bg-[#0d0d0d] min-h-screen">
       <Navbar name="Shounak Kossambe" />
       <Hero name="Shounak Kossambe" title="Software Engineer" />
+      <Experience />
       <Projects />
       <Skills />
-      <Experience />
       <Blog />
       <About />
       <Contact />

@@ -4,7 +4,7 @@ function About() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section className="py-16 px-8  max-w-4xl mx-auto">
+    <section id="about" className="py-16 px-4 md:px-8  max-w-4xl mx-auto">
       <p className="text-3xl font-bold text-white mb-6">ABOUT ME</p>
       <h2 className="text-white text-2xl font-bold mb-4 text-center">
         About Me
@@ -21,7 +21,7 @@ function About() {
       )}
 
       <button
-        className="border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-black px-6 py-2 text-sm tracking-widest uppercase transition-all duration-300 mt-4"
+        className="border border-[#e05c3a] text-[#e05c3a] hover:bg-[#e05c3a] hover:text-black px-6 py-2 text-sm tracking-widest uppercase transition-all duration-300 mt-4"
         onClick={() => setShowMore(!showMore)}
       >
         {showMore ? "Show Less" : "Read More"}
