@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar({ name }) {
   return (
     <nav className="bg-[#0d0d0d] border-b border-[#2a2a2a] px-4 md:px-8 py-5 flex justify-between items-center">
@@ -5,24 +7,42 @@ function Navbar({ name }) {
         {name}'s Portfolio
       </h2>
       <ul className="flex gap-8">
-        <a
-          href="#about"
-          className="text-[#a0a0a0] hover:text-[#e05c3a] cursor-pointer transition-all duration-300 text-sm tracking-wide"
+        <Link
+          to="/"
+          className="relative text-[#a0a0a0] hover:text-white text-sm tracking-wide transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#e05c3a] after:transition-all after:duration-300 hover:after:w-full"
+        >
+          Home
+        </Link>
+        <Link
+          to="/experience"
+          className="relative text-[#a0a0a0] hover:text-white text-sm tracking-wide transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#e05c3a] after:transition-all after:duration-300 hover:after:w-full"
+        >
+          Experience
+        </Link>
+        <Link
+          to="/skills"
+          className="relative text-[#a0a0a0] hover:text-white text-sm tracking-wide transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#e05c3a] after:transition-all after:duration-300 hover:after:w-full"
+        >
+          Skills
+        </Link>
+        <Link
+          to="/about"
+          className="relative text-[#a0a0a0] hover:text-white text-sm tracking-wide transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#e05c3a] after:transition-all after:duration-300 hover:after:w-full"
         >
           About
-        </a>
-        <a
-          href="#projects"
-          className="text-[#a0a0a0] hover:text-[#e05c3a] cursor-pointer transition-all duration-300 text-sm tracking-wide"
+        </Link>
+        <Link
+          to="/projects"
+          className="relative text-[#a0a0a0] hover:text-white text-sm tracking-wide transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#e05c3a] after:transition-all after:duration-300 hover:after:w-full"
         >
           Projects
-        </a>
-        <a
-          href="#contact"
-          className="text-[#a0a0a0] hover:text-[#e05c3a] cursor-pointer transition-all duration-300 text-sm tracking-wide"
+        </Link>
+        <Link
+          to="/contact"
+          className="relative text-[#a0a0a0] hover:text-white text-sm tracking-wide transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#e05c3a] after:transition-all after:duration-300 hover:after:w-full"
         >
           Contact
-        </a>
+        </Link>
       </ul>
     </nav>
   );

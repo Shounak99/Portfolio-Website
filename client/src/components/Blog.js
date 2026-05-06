@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-
+import PageTransition from "./PageTransition";
 function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [selectedBlog, setSelectedBlog] = useState(null);
@@ -29,18 +29,20 @@ function Blog() {
     );
   }
   return (
-    <section className="max-w-2xl mx-auto py-16 px-4 md:px-8">
-      <h2 className="text-2xl font-bold text-white mb-4">Blog</h2>
-      {blogs.map((blog) => (
-        <div
-          className="bg-[#1a1a1a] border border-[#2a2a2a] hover:border-[#e05c3a] transition-all duration-300 rounded-lg p-6 mb-4 cursor-pointer"
-          key={blog.id}
-          onClick={() => setSelectedBlog(blog)}
-        >
-          <h3 className="text-3xl font-bold text-white mb-6">{blog.title}</h3>
-        </div>
-      ))}
-    </section>
+    <PageTransition>
+      <section className="max-w-2xl mx-auto py-16 px-4 md:px-8">
+        <h2 className="text-2xl font-bold text-white mb-4">Blog</h2>
+        {blogs.map((blog) => (
+          <div
+            className="bg-[#1a1a1a] border border-[#2a2a2a] hover:border-[#e05c3a] transition-all duration-300 rounded-lg p-6 mb-4 cursor-pointer"
+            key={blog.id}
+            onClick={() => setSelectedBlog(blog)}
+          >
+            <h3 className="text-3xl font-bold text-white mb-6">{blog.title}</h3>
+          </div>
+        ))}
+      </section>
+    </PageTransition>
   );
 }
 export default Blog;
