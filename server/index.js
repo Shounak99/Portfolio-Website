@@ -72,6 +72,49 @@ let blogPosts = [
   },
 ];
 
+const experience = [
+  {
+    id: 1,
+    company: "UKG",
+    type: "Full-time",
+    location: "Noida, Uttar Pradesh, India · Hybrid",
+    roles: [
+      {
+        title: "Senior Software Engineer (SDE II)",
+        from: "Nov 2024",
+        to: "Present"
+      }
+    ],
+    description: "Designed and implemented key features for UKG's Workforce Management platform, serving 80,000+ enterprise customers globally, using Java, Spring Boot, and Microservices architecture."
+  },
+  {
+    id: 2,
+    company: "TechMojo Solutions",
+    type: "Full-time",
+    location: "Hyderabad, Telangana, India · On-site",
+    roles: [
+      {
+        title: "Member of Technical Staff",
+        from: "Nov 2023",
+        to: "Nov 2024"
+      }
+    ],
+    description: ""
+  },
+  {
+    id: 3,
+    company: "Capgemini",
+    type: "Full-time",
+    location: "Chennai, Tamil Nadu, India",
+    roles: [
+      { title: "Associate Consultant", from: "Aug 2022", to: "Oct 2023" },
+      { title: "Senior Software Engineer", from: "Aug 2021", to: "Jul 2022" }
+    ],
+    description: "Java, Spring Boot and +5 skills"
+  }
+];
+
+
 app.get("/", (req, res) => {
   res.send("Server is running!");
 });
@@ -105,6 +148,12 @@ app.post("/api/blogs", (req, res) => {
   blogPosts.push(newPost);
   res.status(201).json({ success: true, post: newPost });
 });
+
+app.get("/api/experience", (req, res) => {
+  res.json(experience);
+}
+);
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
