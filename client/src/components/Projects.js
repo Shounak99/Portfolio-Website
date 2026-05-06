@@ -22,6 +22,16 @@ function Projects() {
         >
           <h3 className="text-white font-bold text-lg mb-2">{project.title}</h3>
           <p className="text-[#a0a0a0] text-sm mb-3">{project.description}</p>
+          <p>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#e05c3a] hover:text-[#ff6b35] text-sm tracking-wide uppercase"
+            >
+              View Project
+            </a>
+          </p>
           <p className="text-[#e05c3a] text-xs tracking-wide uppercase">
             <strong>Tech:</strong> {project.tech}
           </p>

@@ -27,18 +27,14 @@ const projects = [
     title: "Portfolio Website",
     description: "Personal portfolio built with React and Node.js",
     tech: "React, Node.js, Express",
+    link: "https://github.com/Shounak99/Portfolio-Website",
   },
   {
     id: 2,
-    title: "Todo App",
+    title: "Integrated-Project-Management-Tool",
     description: "Task manager with add and delete functionality",
     tech: "React, useState",
-  },
-  {
-    id: 3,
-    title: "Weather App",
-    description: "Fetches live weather data from an external API",
-    tech: "React, REST API",
+    link: "https://github.com/Shounak99/Integrated-Project-Management-Tool",
   },
 ];
 
@@ -82,10 +78,11 @@ const experience = [
       {
         title: "Senior Software Engineer (SDE II)",
         from: "Nov 2024",
-        to: "Present"
-      }
+        to: "Present",
+      },
     ],
-    description: "Designed and implemented key features for UKG's Workforce Management platform, serving 80,000+ enterprise customers globally, using Java, Spring Boot, and Microservices architecture."
+    description:
+      "Designed and implemented key features for UKG's Workforce Management platform, serving 80,000+ enterprise customers globally, using Java, Spring Boot, and Microservices architecture.",
   },
   {
     id: 2,
@@ -96,10 +93,10 @@ const experience = [
       {
         title: "Member of Technical Staff",
         from: "Nov 2023",
-        to: "Nov 2024"
-      }
+        to: "Nov 2024",
+      },
     ],
-    description: ""
+    description: "",
   },
   {
     id: 3,
@@ -108,12 +105,11 @@ const experience = [
     location: "Chennai, Tamil Nadu, India",
     roles: [
       { title: "Associate Consultant", from: "Aug 2022", to: "Oct 2023" },
-      { title: "Senior Software Engineer", from: "Aug 2021", to: "Jul 2022" }
+      { title: "Senior Software Engineer", from: "Aug 2021", to: "Jul 2022" },
     ],
-    description: "Java, Spring Boot and +5 skills"
-  }
+    description: "Java, Spring Boot and +5 skills",
+  },
 ];
-
 
 app.get("/", (req, res) => {
   res.send("Server is running!");
@@ -151,8 +147,7 @@ app.post("/api/blogs", (req, res) => {
 
 app.get("/api/experience", (req, res) => {
   res.json(experience);
-}
-);
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
