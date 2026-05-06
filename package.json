@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "cors": "^2.8.6"
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "nodemailer": "^8.0.7"
   },
   "devDependencies": {
     "tailwindcss": "^4.2.4"
