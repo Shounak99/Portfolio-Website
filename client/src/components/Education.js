@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 function Education() {
   const [education, setEducation] = useState([]);
   const [loading, setLoading] = useState(true);
