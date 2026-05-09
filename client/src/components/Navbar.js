@@ -8,6 +8,7 @@ function Navbar({ name }) {
   const links = [
     { to: "/", label: "Home" },
     { to: "/experience", label: "Experience" },
+    { to: "/education", label: "Education" },
     { to: "/skills", label: "Skills" },
     { to: "/about", label: "About" },
     { to: "/projects", label: "Projects" },

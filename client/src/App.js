@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Blog from "./components/Blog";
 import Experience from "./components/Experience";
+import Education from "./components/Education";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
@@ -27,6 +28,7 @@ function AppContent() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/education" element={<Education />} />
         </Routes>
       </AnimatePresence>
     </div>
