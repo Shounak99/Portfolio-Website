@@ -1,6 +1,18 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const nodemailer = require("nodemailer");
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS,
+  },
+});
+
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -68,6 +80,33 @@ let blogPosts = [
   },
 ];
 
+const education = [
+  {
+    id: 1,
+    institution: "National Institute of Technology Warangal",
+    degree: "Bachelor of Technology in Mechanical Engineering",
+    from: "Aug 2017",
+    to: "Jul 2021",
+    grade: "CGPA 7.76/10.0",
+  },
+  {
+    id: 2,
+    institution: "CBSE 12",
+    degree: "Senior Secondary School",
+    from: "Apr 2016",
+    to: "May 2017",
+    grade: "Percentage 96.4%",
+  },
+  {
+    id: 3,
+    institution: "CBSE 10",
+    degree: "Secondary School",
+    from: "Apr 2014",
+    to: "May 2015",
+    grade: "CGPA 10.0/10.0",
+  },
+];
+
 const experience = [
   {
     id: 1,
@@ -125,8 +164,19 @@ app.get("/api/skills", (req, res) => {
 
 app.post("/api/contact", (req, res) => {
   const { name, email, message } = req.body;
-  console.log("Contact form received:", { name, email, message });
-  res.json({ success: true, message: `Thanks ${name}, we'll be in touch!` });
+  const mailOptions = {
+    from: process.env.GMAIL_USER,
+    to: process.env.GMAIL_USER,
+    subject: `Portfolio Contact from ${name}`,
+    text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+  };
+  transporter.sendMail(mailOptions, (error) => {
+    if (error)
+      return res
+        .status(500)
+        .json({ success: false, message: "Failed to send email" });
+    res.json({ success: true, message: `Thanks ${name}, I'll be in touch!` });
+  });
 });
 
 app.get("/api/blogs", (req, res) => {
@@ -147,6 +197,10 @@ app.post("/api/blogs", (req, res) => {
 
 app.get("/api/experience", (req, res) => {
   res.json(experience);
+});
+
+app.get("/api/education", (req, res) => {
+  res.json(education);
 });
 
 app.listen(PORT, () => {
